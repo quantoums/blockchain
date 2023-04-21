@@ -20,6 +20,11 @@ class Blockchain(object):
     def get_chain(self):
           print(self.chain)
 
+    def get_block(self,index):
+          if(index < len(self.chain)):
+            return self.chain[index]
+          return 'This block does not exist !'
+
     def last_block(self):
 
         # returns the last block of the chain
