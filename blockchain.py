@@ -13,13 +13,16 @@ class Blockchain(object):
         self.previous_hash = None
         
         #create genesis block
-        print(" \n---------------LIGHT ON !--------------------\n")
+        print(" \n WELCOME TO QUANTOUMS BLOCKCHAIN !\n")
 
         self.proof_of_work()
 
+    #   
     def get_chain(self):
+          
           print(self.chain)
 
+    # Returns the block with the corresponding index 
     def get_block(self,index):
           if(index < len(self.chain)):
             return self.chain[index]
