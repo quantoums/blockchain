@@ -4,6 +4,7 @@ async def handle_connection(reader,writer):
 
     writer.write("Hello new user, type something ... \n".encode())
 
+    "Read until a given byte string, expected, is encountered or until timeout seconds have passed."
     data = await reader.readuntil(b"\n")
 
     writer.write('You sent: '.encode() + data)
